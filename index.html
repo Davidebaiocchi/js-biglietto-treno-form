@@ -12,7 +12,7 @@
     <h2>calcola il prezzo del tuo biglietto</h1>
 
     <div class="container">
-        <div class="first-row-content">
+        <div class="row-content">
             <div class="item">
                 <label for="nome cognome">Nome Cognome</label>
                 <br>
@@ -42,9 +42,34 @@
 
     <h2 class="mt-30">Il tuo biglietto</h2>
 
-    <div class="container">
+    <div class="container ticket-container">
+        <h2 class="black">Dettaglio passeggero</h2>
+        
+        <div class="row-content">
+            <div class="item passeggero">
+                <h3>Nome passeggero</h3>
+                <div id="username"></div>
+            </div>
+    
+            <div class="item offerta">
+                <h3>Offerta</h3>
+                <div id="offer"></div>
+            </div>
 
-    </div>
+            <div class="item carrozza">
+                <h3>Carrozza</h3>
+                <div id="carrozza"></div>
+            </div>
+            <div class="item cp">
+                <h3>Codice CP</h3>
+                <div id="cpcode"></div>
+            </div>
+            
+            <div class="item costo">
+                <h3>Costo biglietto</h3>
+            <div id="total"></div>
+            </div>            
+        </div>
     
     <script src="js/script.js"></script>
 </body>

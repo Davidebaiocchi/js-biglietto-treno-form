@@ -22,13 +22,14 @@ h2 {
     height: 250px;
     margin-top: 50px;
     border-radius: 30px;
+    padding-top: 30px;
 }
 
 .mt-30 {
     margin-top: 30px;
 }
 
-.first-row-content{
+.row-content{
     display: flex;
     justify-content: center;
     padding-top: 30px;
@@ -66,6 +67,24 @@ button {
     padding: 5px;
     border-radius: 10px;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 /* seconda parte main */
+.ticket-container {
+    text-align: left;
+    padding-left: 100px;
+}
+
+.black {
+    color: black;
+    font-size: 20px;
+}
+
+.displayonlick {
+    display: block;
+}
+
+.displaynone {
+    display: none;
+}
