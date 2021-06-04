@@ -14,7 +14,7 @@ h2 {
     font-size: 30px;
     text-transform: uppercase;
 }
-
+/* prima parte main */
 .container {
     width: 70%;
     margin: 0 auto;
@@ -23,7 +23,49 @@ h2 {
     margin-top: 50px;
     border-radius: 30px;
 }
+
 .mt-30 {
     margin-top: 30px;
 }
 
+.first-row-content{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+label {
+    font-size: 25px;
+    color: #b91450;
+}
+option {
+    font-size: 18px;
+}
+
+input, select {
+    border: 1px solid #b91450;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.item {
+    margin-right: 70px;
+}
+
+.buttons {
+    margin-top: 50px;
+}
+
+button {
+    font-size: 20px;
+    color: #b91450;
+    font-weight: 700;
+    background-color: lightgrey;
+    border: 1px solid #b91450;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+/* seconda parte main */
