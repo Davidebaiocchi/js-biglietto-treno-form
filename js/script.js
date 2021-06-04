@@ -18,6 +18,7 @@ generateButton.addEventListener('click', function() {
     // codice da svolgere al click 
 
     // displayonclick 
+    ticket.classList.remove("displaynone");
     ticket.classList.add("displayonlick");
     
     // nome utente 
@@ -59,23 +60,21 @@ generateButton.addEventListener('click', function() {
 
     if (userAge === "minorenne") {
         finalPrice = defaultPrice - percent20;
-        console.log("prezzo dopo sconto 20", finalPrice);
+        console.log("prezzo dopo sconto 20", finalPrice.toFixed(2));
 
         // popolo html 
         document.getElementById("offer").innerHTML = "sconto 20%";
-        document.getElementById("total").innerHTML = finalPrice;
 
     } else if (userAge === "over65") {
         finalPrice = defaultPrice - percent40;
 
         // popolo html 
         document.getElementById("offer").innerHTML = "sconto 40%";
-        document.getElementById("total").innerHTML = finalPrice;
 
     } else {
         document.getElementById("offer").innerHTML = "";
-        document.getElementById("total").innerHTML = finalPrice;
     }
+    document.getElementById("total").innerHTML = finalPrice + '€';
 
     // genero numeri casuali per carrozza
     var casualNumber = Math.floor(Math.random() * (9-1) + 1);
