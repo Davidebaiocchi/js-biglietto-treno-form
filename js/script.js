@@ -53,5 +53,46 @@ generateButton.addEventListener('click', function() {
     percent40 = percent40.toFixed(2);
     // console.log("sconto 40", percent40);
 
+    // condizioni per generare il prezzo finale e popolare i risultati 
+    var finalPrice = defaultPrice;
+    console.log("prezzo intero", finalPrice);
 
+    if (userAge === "minorenne") {
+        finalPrice = defaultPrice - percent20;
+        console.log("prezzo dopo sconto 20", finalPrice);
 
+        // popolo html 
+        document.getElementById("offer").innerHTML = "sconto 20%";
+        document.getElementById("total").innerHTML = finalPrice;
+
+    } else if (userAge === "over65") {
+        finalPrice = defaultPrice - percent40;
+
+        // popolo html 
+        document.getElementById("offer").innerHTML = "sconto 40%";
+        document.getElementById("total").innerHTML = finalPrice;
+
+    } else {
+        document.getElementById("offer").innerHTML = "";
+        document.getElementById("total").innerHTML = finalPrice;
+    }
+
+    // genero numeri casuali per carrozza
+    var casualNumber = Math.floor(Math.random() * (9-1) + 1);
+    document.getElementById("carrozza").innerHTML = casualNumber;
+
+    // genero numeri casuali per codice CP
+    var casualNumberCP = Math.floor(Math.random() * (100000-90000) + 90000);
+    document.getElementById("cpcode").innerHTML = casualNumberCP;
+})
+
+// genero azione al tasto annulla 
+var cancelButton = document.getElementById("cancel-button");
+// console.log(cancelButton);
+
+cancelButton.addEventListener('click', function() {
+    ticket.classList.add("displaynone");
+    document.getElementById("name").value = "";
+    document.getElementById("km").value = "";
+
+})
